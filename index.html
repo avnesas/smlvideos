@@ -14,6 +14,7 @@
         <!-- Video Player -->
         <div id="video-player">
             <video id="main-video" controls>
+                <!-- The default video -->
                 <source src="https://file.garden/Zxdp1wpMpVUTaKKV/SML%20Movie_%20Jeffy's%20Homework!.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -21,12 +22,9 @@
 
         <!-- Video List -->
         <div id="video-list">
-            <h2>More Videos</h2>
-            <ul>
-                <li onclick="playVideo('https://file.garden/Zxdp1wpMpVUTaKKV/SML%20Movie_%20Jeffy's%20Homework!.mp4')">
-                    SML Movie: Jeffy's Homework!
-                </li>
-                <!-- Additional video items can be added here -->
+            <h2>Select a Video</h2>
+            <ul id="video-menu">
+                <!-- Video options will be generated here by JavaScript -->
             </ul>
         </div>
     </main>
