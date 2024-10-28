@@ -1,54 +1,39 @@
-/* style.css */
+// script.js
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+// Array of video objects, each containing a title and URL
+const videos = [
+    {
+        title: "SML Movie: Jeffy's Homework!",
+        url: "https://file.garden/Zxdp1wpMpVUTaKKV/SML%20Movie_%20Jeffy's%20Homework!.mp4"
+    },
+    {
+        title: "SML Movie: Jeffy Ball Z",
+        url: "https://file.garden/Zxdp1wpMpVUTaKKV/SML%20Movie_%20Jeffy%20Ball%20Z.mp4"
+    }
+    // Add more videos here as needed
+];
+
+// Function to play the selected video
+function playVideo(videoUrl) {
+    const mainVideo = document.getElementById("main-video");
+    mainVideo.src = videoUrl;
+    mainVideo.play();
 }
 
-header {
-    background-color: #ff0000;
-    color: white;
-    padding: 10px;
-    text-align: center;
+// Function to populate the video list based on the array
+function loadVideoList() {
+    const videoMenu = document.getElementById("video-menu");
+
+    // Clear any existing content in the video menu
+    videoMenu.innerHTML = '';
+
+    videos.forEach((video) => {
+        const videoItem = document.createElement("li");
+        videoItem.textContent = video.title;
+        videoItem.onclick = () => playVideo(video.url);
+        videoMenu.appendChild(videoItem);
+    });
 }
 
-main {
-    display: flex;
-    margin: 20px;
-}
-
-#video-player {
-    flex: 2;
-    padding: 10px;
-}
-
-#main-video {
-    width: 100%;
-    height: auto;
-}
-
-#video-list {
-    flex: 1;
-    padding: 10px;
-}
-
-#video-list h2 {
-    font-size: 1.5em;
-    color: #333;
-}
-
-#video-list ul {
-    list-style: none;
-    padding: 0;
-}
-
-#video-list li {
-    padding: 10px;
-    cursor: pointer;
-    border-bottom: 1px solid #ddd;
-}
-
-#video-list li:hover {
-    background-color: #f0f0f0;
-}
+// Load the video list on page load
+window.onload = loadVideoList;
