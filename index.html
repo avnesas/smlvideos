@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SML Videos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SML Videos</h1>
+    </header>
+    <main>
+        <!-- Video Player -->
+        <div id="video-player">
+            <video id="main-video" controls>
+                <source src="https://file.garden/Zxdp1wpMpVUTaKKV/SML%20Movie_%20Jeffy's%20Homework!.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Video List -->
+        <div id="video-list">
+            <h2>More Videos</h2>
+            <ul>
+                <li onclick="playVideo('https://file.garden/Zxdp1wpMpVUTaKKV/SML%20Movie_%20Jeffy's%20Homework!.mp4')">
+                    SML Movie: Jeffy's Homework!
+                </li>
+                <!-- Additional video items can be added here -->
+            </ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
